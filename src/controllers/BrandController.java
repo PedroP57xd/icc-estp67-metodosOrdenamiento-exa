@@ -22,22 +22,20 @@ public class BrandController {
   }
 
   public Brand binarySearchByValidYears(Brand[] brands, int validYears, boolean isAscending) {
-    
-    int inicio=0;
-    int fin=brands.length-1;
+
+    int inicio = 0;
+    int fin = brands.length - 1;
 
     for (int i = 0; i < brands.length; i++) {
-      int medio=(inicio);
-      if (brands[medio].getTotalValidYears()==validYears) {
+      int medio = (inicio);
+      if (brands[medio].getTotalValidYears() == validYears) {
         return brands[medio];
-      }else if (brands[medio].getTotalValidYears()<validYears) {
-        inicio=medio+1;
-      }else{
-        fin=medio-1;
+      } else if (brands[medio].getTotalValidYears() < validYears) {
+        inicio = medio + 1;
+      } else {
+        fin = medio - 1;
       }
     }
-    
-    
     return null;
   }
 
